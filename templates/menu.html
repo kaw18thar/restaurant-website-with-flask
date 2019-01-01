@@ -1,9 +1,9 @@
 <html>
 <head>
-  <link rel="stylesheet" type="tex/css" href='{{url_for('static', filename='styles.css')}}'
+  <link rel=stylesheet type=text/css href='{{url_for('static', filename='styles.css')}}'>
 </head>
-<body class="pane">
-
+<body >
+<div class="pane">
 <h1 class="header">{{restaurant.name}}</h1>
 {% with messages = get_flashed_messages() %}
 {% if messages %}
@@ -21,7 +21,8 @@
 
 <div>
 
-<p class="name">{{i.name}}</p>
+<p class="name w">{{i.name}}</p>
+
 
 <p class="description">{{i.description}}</p>
 
@@ -33,5 +34,5 @@
 
 {% endfor %}
 </body>
-
+</div>
 </html>

@@ -27,10 +27,22 @@ class MenuItem(Base):
     course = Column(String(250))
     restaurant_id = Column(Integer, ForeignKey('restaurant.id'))
     restaurant = relationship(Restaurant)
+    @property
+    def serialize(self):
+        #returns obhect data in easily serilizable format
+        return {
+            'name': self.name,
+            'description': self.description,
+            'id': self.id,
+            'price': self.price,
+            'course': self.course
+        }
 
 
-# engine = create_engine('sqlite:///restaurantmenu.db',
-                        # poolclass=SingletonThreadPool)
 
 
-# Base.metadata.create_all(engine)
+engine = create_engine('sqlite:///restaurantmenu.db',
+                        poolclass=SingletonThreadPool)
+
+
+Base.metadata.create_all(engine)

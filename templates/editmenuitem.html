@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Edit Menu Item</title>
+        <link rel=stylesheet type=text/css href='{{url_for('static', filename='styles.css')}}'>
         <style>html{
                 color: darkgoldenrod;
             }
@@ -11,13 +12,14 @@
     </head>
 
 <body>
-
+<div class="pan">
 <!-- INSERT YOUR CODE HERE -->
 <form action='{{url_for('editMenuItem', restaurant_id=restaurant_id, menu_id=menu_id)}}' method="POST">
     Enter the new name: <br>
     <input size="30" placeholder="{{i.name}}" name="name">
     <button type="submit">edit</button> <b><a href='{{url_for('restaurantMenu', restaurant_id=restaurant_id)}}'>cancel</a></b>
 </form>
+</div>
 </body>
 
 </html>

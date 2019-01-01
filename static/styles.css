@@ -56,6 +56,7 @@ a {
     width: 50%;
     display: inline-block;
     float: left;
+    font-weight: 700;
 }
 
 .description {}
@@ -66,7 +67,9 @@ a {
     float: right;
 }
 
-.editdeletepane {}
+.editdeletepane {
+
+}
 
 .flash {
     background: #cee5f5;
